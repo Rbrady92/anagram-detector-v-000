@@ -5,7 +5,7 @@ class Anagram
   @@matches = []
 
   def initialize(word)
-    @word = word.split
+    @word = word.split("")
   end
 
   def match(list)
