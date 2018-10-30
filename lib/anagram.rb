@@ -6,19 +6,19 @@ class Anagram
 
   def initialize(word)
     @word = word.split
-  end 
+  end
 
   def match(list)
     list.each do |curr|
       if curr.length == @word.length
         if @word.all? {|letter| curr.include?(letter)}
           @@matches << curr
-        end         
-      end 
-    end 
+        end
+      end
+    end
     @@matches
-  end 
+  end
 
-end 
-    
+end
+
     
