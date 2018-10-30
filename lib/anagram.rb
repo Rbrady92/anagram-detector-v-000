@@ -2,21 +2,20 @@
 class Anagram
   attr_accessor :word
 
-  @@matches = []
-
   def initialize(word)
     @word = word.split("")
   end
 
   def match(list)
+    matches = []
     list.each do |curr|
       if curr.length == @word.length
         if @word.all? {|letter| curr.include?(letter)}
-          @@matches << curr
+          matches << curr
         end
       end
     end
-    @@matches
+    matches
   end
 
 end
